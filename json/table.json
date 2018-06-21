@@ -1,0 +1,25 @@
+{
+	"code": 0,
+	"msg": "",
+	"count": 1000,
+	"data": [
+		{
+			"id": 10000,
+			"username": "user-0",
+			"sex": "女",
+			"city": "城市-0",
+			"sign": "签名-0",
+			"experience": 255,
+			"logins": 24
+		}, {
+			"id": 10001,
+			"username": "user-1",
+			"sex": "男",
+			"city": "城市-1",
+			"sign": "签名-1",
+			"experience": 884,
+			"logins": 58
+		}
+	
+	]
+}
