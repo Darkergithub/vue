@@ -1,4 +1,9 @@
 $(function(){
+	//退出登陆
+	$("span img").click(function(){
+		window.location.href="../login.html"
+	})
+	
 	$("li").each(function(){
 		$(this).click(function(){
 			$(this).addClass("active");
