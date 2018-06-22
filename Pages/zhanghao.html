@@ -46,31 +46,30 @@
 				<button class="layui-btn" data-type="getCheckLength">获取选中数目</button>
 				<button class="layui-btn" data-type="isAll">验证是否全选</button>
 			</div>
-			
-			<div class="layui-row">
-		    <div class="layui-col-md12">
-		      <table class="layui-table" lay-data="{ height:332, url:'../json/table.json/', page:true, id:'idTest'}" lay-filter="demo">
-				<thead>
-					<tr>
-						<th lay-data="{type:'checkbox',width:'10%', fixed: 'left'}"></th>
-						<th lay-data="{field:'id', width:'10%', sort: true, fixed: true}">ID</th>
-						<th lay-data="{field:'username', width:'10%'}">用户名</th>
-						<th lay-data="{field:'sex', width:'10%', sort: true}">性别</th>
-						<th lay-data="{field:'city', width:'10%'}">城市</th>
-						<th lay-data="{field:'sign', width:'20%'}">签名</th>
-						<th lay-data="{field:'experience', width:'10%', sort: true}">积分</th>
 
-						<!--<th lay-data="{field:'classify', width:80}">职业</th>-->
-						<!--<th lay-data="{field:'wealth', width:135, sort: true}">财富</th>-->
-						<!--<th lay-data="{field:'score', width:80, sort: true, fixed: 'right'}">评分</th>-->
-						<th lay-data="{fixed: 'right', width:'20%', align:'center', toolbar: '#barDemo'}"></th>
-					</tr>
-				</thead>
-			</table>
-		    </div>
-		    
-		  </div>
-			
+			<div class="layui-row">
+				<div class="layui-col-md12">
+					<table class="layui-table" lay-data="{ height:600, url:'../json/table.json/', page:true, id:'idTest',limit:10}" lay-filter="demo">
+						<thead>
+							<tr>
+								<th lay-data="{type:'checkbox',width:'10%', fixed: 'left',align:'center'}"></th>
+								<th lay-data="{field:'id', width:'10%', sort: true, fixed: true,align:'center'}">ID</th>
+								<th lay-data="{field:'username', width:'10%',align:'center'}">用户名</th>
+								<th lay-data="{field:'sex', width:'10%', sort: true,align:'center'}">性别</th>
+								<th lay-data="{field:'city', width:'10%',align:'center'}">城市</th>
+								<th lay-data="{field:'sign', width:'20%',align:'center'}">签名</th>
+								<th lay-data="{field:'experience', width:'10%', sort: true,align:'center'}">积分</th>
+
+								<!--<th lay-data="{field:'classify', width:80}">职业</th>-->
+								<!--<th lay-data="{field:'wealth', width:135, sort: true}">财富</th>-->
+								<!--<th lay-data="{field:'score', width:80, sort: true, fixed: 'right'}">评分</th>-->
+								<th lay-data="{fixed: 'right', width:'20%', align:'center', toolbar: '#barDemo'}"></th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+
+			</div>
 
 			<script type="text/html" id="barDemo">
 				<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
@@ -83,10 +82,10 @@
 
 	<script src="../layui/layui.js"></script>
 	<script src="../js/common/ajax.js"></script>
-	<script src="../js/pages/homepage.js"></script>
 	<script>
 		layui.use('table', function() {
 			var table = layui.table;
+
 			//监听表格复选框选择
 			table.on('checkbox(demo)', function(obj) {
 				console.log(obj)
@@ -95,6 +94,7 @@
 			table.on('tool(demo)', function(obj) {
 				var data = obj.data;
 				if(obj.event === 'detail') {
+					
 					layer.msg('ID：' + data.id + ' 的查看操作');
 				} else if(obj.event === 'del') {
 					layer.confirm('真的删除行么', function(index) {
