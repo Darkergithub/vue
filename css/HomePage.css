@@ -12,6 +12,7 @@ header p{
 }
 
 header p span img{
+	cursor: pointer;
 	margin-left: 20px;
 }
 .container {
