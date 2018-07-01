@@ -9,7 +9,7 @@
 		<script src="js/common/jquery-1.8.3.js"></script>
 
 	</head>
-	
+
 	<body>
 		<div class="login_box">
 			<div class="login_l_img"><img src="image/login-img.png" /></div>
@@ -21,20 +21,19 @@
 					<p>禅心学院-后台管理系统</p>
 				</div>
 	
-					<input type="text" placeholder="请输入用户名"/>
-					<input type="password" placeholder="请输入密码"/>
-					<!--<input name="username" type="text" value="用户名" onfocus="this.value=''" onblur="if(this.value==''){this.value='用户名'}">
-					<span id="password_text" onclick="this.style.display='none';document.getElementById('password').style.display='block';document.getElementById('password').focus().select();">密码</span>
-					<input name="password" type="password" id="password" style="display:none;" onblur="if(this.value==''){document.getElementById('password_text').style.display='block';this.style.display='none'};" />-->
+					<input type="text" placeholder="请输入手机号" id="userPhone"/>
+					<input type="password" placeholder="请输入密码" id="userPassword"/>
 					<input value="登录" style="width:100%;" type="submit" class="submit">
 			</div>
 			<div class="copyright">某某有限公司 版权所有©2016-2018 技术支持电话：000-00000000</div>
 		</div>
 
 	</body>
+	<script src="js/common/ajax.js"></script>
+	<script src="js/pages/login.js"></script>
 	<script>
 		$(".submit").live("click",function(){
-			window.location.href="Pages/HomePage.html"
+//			window.location.href="Pages/HomePage.html"
 		})
 	</script>
 </html>
