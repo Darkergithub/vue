@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注册</title>
+		<link rel="stylesheet" href="../css/pages/register.css" />
+		
+	</head>
+	<body>
+		<div class="contact">
+			<h1>用户注册</h1>
+			<form id="myform" action="" name="form1" method="post" onSubmit="return vad()">
+				<ul>
+					<li>
+						<label>用户名称：</label>
+						<input type="text" placeholder="请输入用户名" name="username" id="username" onblur="vadName()"/>
+						<span class="tips" id="divname">长度3~12个字符</span>
+					</li>
+					<li>
+						<label for="">手机号码：</label>
+						<input type="text" placeholder="用输入你的电话号" id="telphone" name="telphone"/ onblur="phone()">
+					</li>
+					<li>
+						<label>密码：</label>
+						<input type="password" placeholder="请输入密码"  id="password" onblur="vadPwd()"/>
+						<span class="tips" id="divpassword1">密码必须由字母和数字组成</span>
+					</li>
+					<li>
+						<label>确认密码：</label>
+						<input type="password"  placeholder="请再次输入你的密码" id="password2" onblur="vadPwd2()" >
+						<span class="tips" id="divpassword2">两次密码需要相同</span>
+					</li>
+					<li>
+						<label for="">用户地址：</label>
+						<span class="areas">
+							<select id="province" name='province'></select>
+							<select id="city" name='city'></select>
+							<select id="area" name='area'></select>
+						</span>
+					</li>
+					<li>
+						<label for="">用户类型：</label>
+						<input type="text" placeholder="用输入用户类型" />
+					</li>
+					
+				</ul>	
+			</form>
+			<p  style="text-align: center;"><button onclick="return register()">注册 </button></p>
+		</div>
+		
+	</body>
+	<script src="../js/common/jquery-1.8.3.js"></script>
+	<script src="../js/common/ajax.js"></script>
+	<script src="../js/pages/register.js"></script>
+
+</html>
