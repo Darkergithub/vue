@@ -45,3 +45,11 @@ li.active {
 	background: #42B983;
 	color: #fff;
 }
+li a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+li.active a{
+	color:#fff;
+}
