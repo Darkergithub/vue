@@ -1,0 +1,24 @@
+body{
+	padding: 20px;
+	box-sizing: border-box;
+}
+.layui-form-label{
+	width:35px;
+}
+.layui-form-item .layui-inline{
+	margin: 0;
+}
+.head{
+  	height: auto;
+    line-height: 60px;	
+}
+.head button{
+	margin-left: 50px;
+}
+.content{
+	width: 100%;
+}
+ .layui-table-cell {  
+        height: auto;  
+        line-height: 35px;  
+    }  
