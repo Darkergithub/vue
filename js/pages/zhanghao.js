@@ -1,8 +1,4 @@
 
-$(".head span").click(function() {
-	$(".model").hide();
-	$(".bg").hide();
-})
 var token = sessionStorage["token"];
 
 layui.use(['table', 'form'], function() {
@@ -15,7 +11,13 @@ layui.use(['table', 'form'], function() {
 		//加载地区
 		address();
 	})
-	
+	$(".head span").click(function() {
+		$(".model").hide();
+		$(".bg").hide();
+//		$("select[name='province']").empty();
+//		$("select[name='city']").empty();
+//  	$("select[name='area']").empty();
+	})
 	//更改省份
 	form.on('select(province)', function(data){
 	  console.log(data.value); //得到被选中的值
@@ -40,7 +42,7 @@ layui.use(['table', 'form'], function() {
 				'parentCode': '0000'
 			},
 			function(data) {
-				//				console.log(data);
+					console.log(data);
 				$("select[name='city']").empty();
 				$.each(data.result.areaInfos, function(i, d) {
 					$("select[name='province']").append("<option value='" + i + "'>" + d + "</option>");
@@ -50,7 +52,7 @@ layui.use(['table', 'form'], function() {
 				// 获取第一个省份的code  
 				// 根据第一个省份code获取对应城市列表  
 				var provCode = $("select[name='province']").val();
-				addressCity(provCode);
+//				addressCity(provCode);
 			},
 		)
 	}
@@ -73,7 +75,7 @@ layui.use(['table', 'form'], function() {
 				// 获取第一个城市的code  
 				// 根据第一个城市code获取对应区县列表  
 				var cityCode = $("select[name='city']").val();
-				addressArea(cityCode);
+//				addressArea(cityCode);
 			},
 		)
 	}
