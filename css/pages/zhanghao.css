@@ -1,6 +1,7 @@
 body{
 	padding: 20px;
 	box-sizing: border-box;
+	min-width: 1090px;
 }
 .layui-form-label{
 	width:35px;
@@ -13,7 +14,7 @@ body{
     line-height: 60px;	
 }
 .head button{
-	margin-left: 50px;
+	margin-left: 20px;
 }
 .content{
 	width: 100%;
@@ -22,3 +23,54 @@ body{
         height: auto;  
         line-height: 35px;  
     }  
+.layui-btn-xs{
+	padding: 0 30px;
+}
+/*新建弹窗model*/
+.bg{
+	width: 100%;height: 100%;
+	background: rgba(0,0,0,0.1);
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.model{
+	width: 400px;
+	height: 400px;
+	background: #fff;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+	display: none;
+	
+}
+.model .head{
+	padding: 0 15px;
+	line-height: 50px;
+	background:#1E9FFF;
+	color: #fff;
+}
+.model .head span{
+	float: right;
+	cursor: pointer;
+	width: 20px;
+	text-align: center;
+}
+.model .cont{
+	padding-top: 15px;
+}
+.model .layui-inline{
+	width: 100%;
+}
+.model .layui-input-inline{
+	width: 75%;
+	margin-bottom: 15px;
+}
+.model .btn{
+	text-align: center;
+}
+.model .btn .submits{
+	width: 130px;
+}

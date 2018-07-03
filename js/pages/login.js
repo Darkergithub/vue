@@ -10,10 +10,10 @@ $(".submit").click(function(){
 			sessionStorage["token"]=data.result.token;
 			sessionStorage["level"]=data.result.level;
 			
-			var myDate = new Date();
-			myDate.setDate(myDate.getDate()+30)
-			document.cookie="token="+data.result.token+";expires="+myDate;
-//			window.location.href = "page/homePage.html";
+//			var myDate = new Date();
+//			myDate.setDate(myDate.getDate()+30)
+//			document.cookie="token="+data.result.token+";expires="+myDate;
+			window.location.href = "Pages/HomePage.html";
 		},
 		function(data){
 			

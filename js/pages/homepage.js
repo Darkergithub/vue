@@ -9,7 +9,8 @@ $(function(){
 			$(this).addClass("active");
 			$(this).siblings().removeClass("active");
 //			var code = $(this).attr("code");
-//			console.log(code)
+//			console.log(location.href)
+//			location.href = location.href +"#"+code;
 //			$(".content iframe").attr("src", code + ".html");
 //			$(".content iframe").attr("target",code + ".html");
 			
