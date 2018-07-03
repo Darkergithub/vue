@@ -1,8 +1,4 @@
-$(".add").live("click", function() {
-	$(".bg").show();
-	$(".model").show();
-address()
-})
+
 $(".head span").click(function() {
 	$(".model").hide();
 	$(".bg").hide();
@@ -12,7 +8,13 @@ var token = sessionStorage["token"];
 layui.use(['table', 'form'], function() {
 	var table = layui.table;
 	var form = layui.form;
-	
+	$ = layui.$;
+	$(".add").live("click", function() {
+		$(".bg").show();
+		$(".model").show();
+		//加载地区
+		address();
+	})
 	
 	//更改省份
 	form.on('select(province)', function(data){
@@ -29,7 +31,7 @@ layui.use(['table', 'form'], function() {
 
 
 //=======初始化省市区===========
-//	address();
+
 	//===省===
 	function address() {
 		ajaxPost(
@@ -93,6 +95,7 @@ layui.use(['table', 'form'], function() {
 			},
 		)
 	}
+
 
 
 
