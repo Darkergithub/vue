@@ -38,7 +38,7 @@
 						<input type="text" name="email" class="layui-input">
 					</div>
 				</div>
-				<button class="layui-btn layui-btn-normal">查询</button>
+				<button class="layui-btn layui-btn-normal checkOf">查询</button>
 				<button class="layui-btn add layui-btn-normal">新增</button>
 			</div>
 		</div>
@@ -108,7 +108,7 @@
 						</div>
 						<div style="margin-left: 65px;" class="layui-input-inline">
 							<select lay-filter="city"  id="city" name='city'>
-								<option value="">请选择市</option>
+								<option value="">请选择</option>
 							</select>
 						</div>
 						<div style="margin-left: 65px;" class="layui-input-inline">
@@ -127,7 +127,11 @@
 	<script src="../js/common/ajax.js"></script>
 	<script src="../js/pages/zhanghao.js"></script>
 	<script>
-
+		$(".submits").live("click",function(){
+			window.location.reload();
+			$(".model").hide();
+		$(".bg").hide();
+		})
 	</script>
 
 </html>
