@@ -46,6 +46,9 @@ body{
 	display: none;
 	
 }
+.change_model{
+	height: 450px;
+}
 .model .head{
 	padding: 0 15px;
 	line-height: 50px;
@@ -72,5 +75,8 @@ body{
 	text-align: center;
 }
 .model .btn .submits{
+	width: 130px;
+}
+.change_model .btn .submits_change{
 	width: 130px;
 }
