@@ -7,16 +7,21 @@ layui.use(['table', 'form'], function() {
 	$ = layui.$;
 	$(".add").live("click", function() {
 		$(".bg").show();
-		$(".model").show();
+		$(".add_model").show();
 		//加载地区
 		address();
 	})
-	$(".head span").click(function() {
-		$(".model").hide();
+	$(".add_model .head span").click(function() {
+		$(".add_model").hide();
 		$(".bg").hide();
 		$("select[name='province']").empty();
 		$("select[name='city']").empty();
     	$("select[name='area']").empty();
+	})
+	$(".submits").live("click",function(){
+		window.location.reload();
+		$(".model").hide();
+		$(".bg").hide();
 	})
 	//更改省份
 	form.on('select(province)', function(data){
@@ -129,7 +134,23 @@ layui.use(['table', 'form'], function() {
 				layer.close(index);
 			});
 		} else if(obj.event === 'edit') {
-			layer.alert('编辑行vvvvvvv：<br>' + JSON.stringify(data))
+//			layer.alert('编辑行vvvvvvv：<br>' + JSON.stringify(data))
+			console.log(data)
+			$(".bg").show();
+			$(".change_model").show();
+			address()
+			$(".model #username").val(data.username);
+			$(".model #phone").val(data.phone);
+			$(".model #password").val(data.password);
+			$(".submits_change").live("click",function(){
+				window.location.reload();
+				$(".model").hide();
+				$(".bg").hide();
+			})
+			$(".change_model .head span").click(function() {
+				$(".change_model").hide();
+				$(".bg").hide();
+			})
 		}
 	});
 	var $ = layui.$,
