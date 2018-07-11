@@ -95,7 +95,7 @@
 				<div class="layui-inline">
 					<label class="layui-form-label">手机</label>
 					<div class="layui-input-inline">
-						<input type="tel" name="phone" class="layui-input">
+						<input type="tel" id="userphone" name="phone" class="layui-input">
 					</div>
 				</div>
 				<form class="layui-form">
@@ -173,7 +173,16 @@
 	<script src="../js/common/ajax.js"></script>
 	<script src="../js/pages/zhanghao.js"></script>
 	<script>
-		
+		$(".checkOf").click(function(){
+			ajaxPost(
+			Url.WDCX, {
+				
+			},
+			function(data) {
+				console.log(data)
+			},
+		)
+		})
 	</script>
 
 </html>

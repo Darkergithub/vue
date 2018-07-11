@@ -19,9 +19,27 @@ layui.use(['table', 'form'], function() {
     	$("select[name='area']").empty();
 	})
 	$(".submits").live("click",function(){
-		window.location.reload();
-		$(".model").hide();
-		$(".bg").hide();
+		var username = $(".add_model #username").val();
+		var userphone = $(".add_model #userphone").val();
+		var province = $(".add_model #province").val();
+		var city = $(".add_model #city").val();
+		var areas = $(".add_model #area").val();
+		var address = province+city+areas;
+		console.log(province+city+areas)
+		ajaxPost(
+			Url.REGISTER, {
+				userName:username,
+				userPhone:userphone,
+				userAddress:address,
+				userType:'NETWORK'
+			},
+			function(data) {
+				console.log(data)
+			},
+		)
+//		window.location.reload();
+//		$(".model").hide();
+//		$(".bg").hide();
 	})
 	//更改省份
 	form.on('select(province)', function(data){
@@ -139,12 +157,12 @@ layui.use(['table', 'form'], function() {
 			$(".bg").show();
 			$(".change_model").show();
 			address()
-			$(".model #username").val(data.username);
-			$(".model #phone").val(data.phone);
-			$(".model #password").val(data.password);
+			$(".change_model #username").val(data.username);
+			$(".change_model #phone").val(data.phone);
+			$(".change_model #password").val(data.password);
 			$(".submits_change").live("click",function(){
 				window.location.reload();
-				$(".model").hide();
+				$(".change_model").hide();
 				$(".bg").hide();
 			})
 			$(".change_model .head span").click(function() {
